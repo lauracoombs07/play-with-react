@@ -1,8 +1,7 @@
-import React, { useReducer } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -10,36 +9,40 @@ const useStyles = makeStyles((theme) => ({
             margin: theme.spacing(1),
             width: '25ch',
         },
-    }
+    },
 }))
 
-export default function Dropdown() {
+export default function InputState() {
     const classes = useStyles()
-    const [userInput, setUserInput] = useReducer(
-        (state, newState) => ({ ...state, ...newState }),
-        {
-            firstName: '',
-            lastName: '',
-            age: '',
-        },
-    )
+    // eslint-disable-next-line no-undef
+    const [firstName, setFirstName] = React.useState()
+    const [lastName, setLastName] = React.useState()
+    const [age, setAge] = React.useState()
 
-    const handleChange = (e) => {
-        const { name } = e.target
+    const handleFirstNameChange = (e) => {
         const newValue = e.target.value
-
-        setUserInput({ [name]: newValue })
+        setFirstName(newValue)
+        console.log('target value', e.target.value)
+        console.log('First Name', firstName)
+    }
+    const handleLastNameChange = (e) => {
+        const newValue = e.target.value
+        setLastName(newValue)
+        console.log('target value', e.target.value)
+        console.log('Last Name', lastName)
+    }
+    const handleAgeChange = (e) => {
+        const newValue = e.target.value
+        setAge(newValue)
+        console.log('target value', e.target.value)
+        console.log('Age', age)
     }
 
-    const handleSubmit = (e) => {
-        console.log(userInput.firstName)
-        alert(userInput.firstName)
-        e.preventDefault()
+    const handleSubmit = (event) => {
+        alert(firstName + lastName + age)
+        event.preventDefault()
     }
 
-    const fullName = `${userInput.firstName} ${userInput.lastName} `
-    const ageFinal = userInput.age ? ` is ${userInput.age} years old. ` : ''
-    
     return (
         <div>
             <div style={{ margin: '2rem' }}>
@@ -52,41 +55,33 @@ export default function Dropdown() {
                     <TextField
                         id="first-name"
                         label="First Name"
-                        name="firstName"
                         variant="outlined"
-                        value={userInput.firstName}
-                        onChange={handleChange}
+                        value={firstName}
+                        onChange={handleFirstNameChange}
                     />
                     <TextField
                         id="last-name"
                         label="Last Name"
-                        name="lastName"
                         variant="outlined"
-                        value={userInput.lastName}
-                        onChange={handleChange}
+                        value={lastName}
+                        onChange={handleLastNameChange}
                     />
                     <TextField
                         id="age"
                         label="Age"
-                        name="age"
                         variant="outlined"
-                        value={userInput.age}
-                        onChange={handleChange}
+                        value={age}
+                        onChange={handleAgeChange}
                     />
                     <Button
-                        className={classes.button}
                         type="submit"
                         variant="contained"
                         color="primary"
                     >
-                        Used Reducer
+                        Used State
                     </Button>
                 </form>
             </div>
-            <Card>
-                {fullName}
-                {ageFinal}
-            </Card>
         </div>
     )
 }
