@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import { TextField } from '@material-ui/core'
-import Header from './Header'
+import Header from '../Header'
 
 const UserInput = () => {
     // Declare new STATE VARIABLE

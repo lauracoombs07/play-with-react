@@ -80,10 +80,5 @@ module.exports = {
         'react/no-danger': 'error', // SD Elements T36
         'react/sort-comp': ['off'],
         'semi': ['error', 'never'],
-        'custom-rules/no-react-create-element': 'error', // SD Elements T36
-        'custom-rules/no-unencoded-uri': 'error', // SD Elements T36
-        'custom-rules/no-unencoded-uri-set-attribute': 'error', // SD Elements T36
-        'custom-rules/no-unsafe-rendering': 'warn', // SD Elements T37
-        'custom-rules/no-unsafe-set-attribute-for-event-handler': 'warn', // SD Elements T37
     },
 }

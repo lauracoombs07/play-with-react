@@ -13,7 +13,7 @@ const Upvote = () => {
     }
 
     return (
-        <>
+        <div>
             <Button
                 id="Add"
                 variant="contained"
@@ -31,7 +31,7 @@ const Upvote = () => {
             >
                 -
             </Button>
-        </>
+        </div>
     )
 }
 

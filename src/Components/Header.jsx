@@ -16,7 +16,7 @@ export function Header(props) {
     console.log('name', firstName)
     return (
         <div className={classes.header}>
-            Data Collection from
+            React Practice for:
             {' '}
             { firstName }
         </div>
