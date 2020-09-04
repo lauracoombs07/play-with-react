@@ -53,21 +53,21 @@ export default function InputState() {
                     onSubmit={handleSubmit}
                 >
                     <TextField
-                        id="first-name"
+                        id="first-name-state"
                         label="First Name"
                         variant="outlined"
                         value={firstName}
                         onChange={handleFirstNameChange}
                     />
                     <TextField
-                        id="last-name"
+                        id="last-name-state"
                         label="Last Name"
                         variant="outlined"
                         value={lastName}
                         onChange={handleLastNameChange}
                     />
                     <TextField
-                        id="age"
+                        id="age-state"
                         label="Age"
                         variant="outlined"
                         value={age}

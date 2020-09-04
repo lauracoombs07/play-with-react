@@ -77,6 +77,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { 'extensions': ['.jsx'] }],
         'react/jsx-indent': ['error', 4],
         'react/jsx-indent-props': ['error', 4],
+        "react/jsx-props-no-spreading": ['off'],
         'react/no-danger': 'error', // SD Elements T36
         'react/sort-comp': ['off'],
         'semi': ['error', 'never'],

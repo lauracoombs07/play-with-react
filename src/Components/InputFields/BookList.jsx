@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import { makeStyles } from '@material-ui/core/styles'
@@ -16,21 +16,26 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function BookList() {
+const BookList = () => {
     const classes = useStyles()
-    const [option, setOption] = useState(books)
-
-    const handleChange = (e, v) => {
-        setOption(v)
-    }
 
     return (
         <div className={classes.divSpacing}>
             <Autocomplete
-                options={books}
-                getOptionLabel={(o) => o.title}
-                value={option}
+                id="book-list"
                 style={{ width: 300 }}
+                options={books}
+                getOptionLabel={(i) => i.title}
+                disableClearable={true}
+                renderOption={(i) => (
+                    <>
+                        <span>
+                            {i.title}
+                            {' '}
+                            {i.author}
+                        </span>
+                    </>
+                )}
                 renderInput={(params) => (
                     <TextField
                         {...params}
@@ -38,8 +43,11 @@ export default function BookList() {
                         variant="outlined"
                     />
                 )}
-                onChange={handleChange}
             />
         </div>
     )
 }
+
+export default BookList
+
+// first Autocomplete, rendering options (outside array), render input 8.29.20
