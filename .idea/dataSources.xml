@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/play_with_react</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - lcoombs@localhost" uuid="d95f1b6e-b7f3-43ed-b70d-f85f36763bb7">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/lcoombs</jdbc-url>
+    </data-source>
   </component>
 </project>

@@ -3,18 +3,8 @@ import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 import Select from '@material-ui/core/Select'
 import MenuItem from '@material-ui/core/MenuItem'
-import { makeStyles } from '@material-ui/styles'
 import { familyMembers, secondaryMembers } from '../../DataFiles/FamilyMembers'
-
-const useStyles = makeStyles(() => ({
-    container: {
-        display: 'flex'
-    },
-    divs: {
-        width: '300px',
-        items: '6'
-    }
-}))
+import useStyles from './SecondFamilyDropdown.styles'
 
 const SecondFamilyDropdown = () => {
     const [person, setPerson] = useState(
@@ -84,6 +74,7 @@ const SecondFamilyDropdown = () => {
 
 export default SecondFamilyDropdown
 
+// second select is causing error uncontrolled component- maybe the onchange?
 // useState, data structures, form control, maps, for loop, member?.map, ??
 // second select dependent on first select outcome
 // #Chad

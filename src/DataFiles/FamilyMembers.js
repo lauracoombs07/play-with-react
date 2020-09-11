@@ -14,53 +14,74 @@ export const familyMembers = [
     { id: 'jennifer', name: 'Jennifer Egbert', relation: 'Sister' }
 ]
 
-export const secondaryMembers = { 'chaz': [
-    { id: 0, name: 'Chelsea Egbert', relation: 'Wife' },
-    { id: 1, name: 'William Egbert', relation: 'Son' },
-    { id: 2, name: 'Ayda Egbert', relation: 'Daughter' },
-],
-'emily': [
-    { id: 3, name: 'Chris Chambers', relation: 'Husband' },
-    { id: 4, name: 'Calvin Chambers', relation: 'Son' },
-    { id: 5, name: 'Daniel Chambers', relation: 'Son' },
-],
-'ashlyn': [
-    { id: 6, name: 'Derek Warren', relation: 'Husband' },
-    { id: 7, name: 'Thomas Warren', relation: 'Son' },
-],
-'elizabeth': [
-    { id: 8, name: 'Ryan  Davis', relation: 'Husband' },
-    { id: 9, name: 'Henry Davis', relation: 'Son' },
-    { id: 10, name: 'Annie Davis', relation: 'Daughter' },
-],
-'rob': [
-    { id: 11, name: 'Jocelyn Egbert', relation: 'Wife' },
-    { id: 12, name: 'Rylee Egbert', relation: 'Daughter' },
-    { id: 13, name: 'Cade Egbert', relation: 'Son' },
-    { id: 14, name: 'Brayden Egbert', relation: 'Son' },
-    { id: 15, name: 'Trey Egbert', relation: 'Son' },
-    { id: 16, name: 'Kennedy Egbert', relation: 'Daughter' },
-    { id: 17, name: 'Easton Egbert', relation: 'Son' },
-],
-'jesse': [
-    { id: 18, name: 'Landon Egbert', relation: 'Son' },
-    { id: 19, name: 'Travis Egbert', relation: 'Son' },
-    { id: 20, name: 'Kaitlyn Egbert', relation: 'Daughter' },
-    { id: 21, name: 'Lincoln Egbert', relation: 'Son' },
-    { id: 22, name: 'Madison Egbert', relation: 'Daughter' },
-    { id: 23, name: 'James Egbert', relation: 'Son' },
-    { id: 24, name: 'Rachelle Egbert', relation: 'Wife' },
+export const secondaryMembers = { 'rob': [
+    { id: 1, name: 'Jocelyn Egbert', relation: 'Wife', relationId: 2.5, gender: 'F' },
+    { id: 2, name: 'Rylee Egbert', relation: 'Daughter', relationId: 3, gender: 'F' },
+    { id: 3, name: 'Cade Egbert', relation: 'Son', relationId: 3, gender: 'M' },
+    { id: 4, name: 'Brayden Egbert', relation: 'Son', relationId: 3, gender: 'M' },
+    { id: 5, name: 'Trey Egbert', relation: 'Son', relationId: 3, gender: 'M' },
+    { id: 6, name: 'Kennedy Egbert', relation: 'Daughter', relationId: 3, gender: 'F' },
+    { id: 7, name: 'Easton Egbert', relation: 'Son', relationId: 3, gender: 'M' },
 ],
 'laura': [
-    { id: 25, name: 'Ben Coombs', relation: 'Husband' },
-    { id: 26, name: 'Cameron Coombs', relation: 'Son' },
-    { id: 27, name: 'Sawyer Coombs', relation: 'Son' },
-    { id: 28, name: 'Kylie Coombs', relation: 'Daughter' },
-    { id: 29, name: 'Grayson Coombs', relation: 'Son' },
-    { id: 30, name: 'Alexia Coombs', relation: 'Daughter' },
+    { id: 8, name: 'Ben Coombs', relation: 'Husband' },
+    { id: 9, name: 'Cameron Coombs', relation: 'Son' },
+    { id: 10, name: 'Sawyer Coombs', relation: 'Son' },
+    { id: 11, name: 'Kylie Coombs', relation: 'Daughter' },
+    { id: 12, name: 'Grayson Coombs', relation: 'Son' },
+    { id: 13, name: 'Alexia Coombs', relation: 'Daughter' },
+],
+'jesse': [
+    { id: 14, name: 'Landon Egbert', relation: 'Son' },
+    { id: 15, name: 'Travis Egbert', relation: 'Son' },
+    { id: 16, name: 'Kaitlyn Egbert', relation: 'Daughter' },
+    { id: 17, name: 'Lincoln Egbert', relation: 'Son' },
+    { id: 18, name: 'Madison Egbert', relation: 'Daughter' },
+    { id: 19, name: 'James Egbert', relation: 'Son' },
+    { id: 20, name: 'Rachelle Egbert', relation: 'Wife' },
 ],
 'cameron': [
-    { id: 31, name: 'Andrew Cameron', relation: 'Son' },
+    { id: 21, name: 'Andrew Cameron', relation: 'Son' },
+],
+'chaz': [
+    { id: 22, name: 'Chelsea Egbert', relation: 'Wife' },
+    { id: 23, name: 'William Egbert', relation: 'Son' },
+    { id: 24, name: 'Ayda Egbert', relation: 'Daughter' },
+],
+'emily': [
+    { id: 25, name: 'Chris Chambers', relation: 'Husband' },
+    { id: 26, name: 'Calvin Chambers', relation: 'Son' },
+    { id: 27, name: 'Daniel Chambers', relation: 'Son' },
+],
+'elizabeth': [
+    { id: 28, name: 'Ryan  Davis', relation: 'Husband' },
+    { id: 29, name: 'Henry Davis', relation: 'Son' },
+    { id: 30, name: 'Annie Davis', relation: 'Daughter' },
+],
+'ashlyn': [
+    { id: 31, name: 'Derek Warren', relation: 'Husband' },
+    { id: 32, name: 'Thomas Warren', relation: 'Son' },
 ], }
+
+export const relationship = [
+    'Spouse', 'Father', 'Mother', 'Son', 'Daughter', 'Cousin', 'Grandparent', 'Sibling'
+]
+//
+// nameOne.id === 1 && nameTwo === 2
+// setRelation('parent')
+// nameOne.id === 1 && nameTwo === 2.5
+// setRelation('parent-in-law')
+// nameOne.id === 2.5 && nameTwo === 1
+// setRelation('child-in-law')
+// nameOne.id === 1 && nameTwo === 3
+// setRelation('Grandparent')
+// nameOne.id === 3 && nameTwo === 1
+// setRelation('Grandchild')
+// nameOne.id === 2 && nameTwo === 1
+// setRelation('child')
+// nameOne.id === nameTwo.id && genderOne !== genderTwo
+// setRelation('Spouse')
+// (nameOne.id === 3 && nameTwo.id === 3) && nameOne.parent !== nameTwo.parent
+// setRelation('Siblings')
 
 // data structure to access later #Chad
