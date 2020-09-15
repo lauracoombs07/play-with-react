@@ -8,8 +8,8 @@ import SecondFamilyDropdown from './InputFields/SecondFamilyDropdown'
 import FamilyAutocomplete from './InputFields/FamilyAutocomplete'
 import MyDivider from './MyDivider'
 import Calculator from './Calculator'
-import ArrayPractice from './InputFields/Arrays'
-import Arrays2 from './InputFields/Arrays2'
+import ArrayPractice from './InputFields/BookFilters'
+import CountHooks from './InputFields/CountHooks'
 import Relations from './Relations'
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
             <MyDivider />
             <ArrayPractice />
             <MyDivider />
-            <Arrays2 />
+            <CountHooks />
             <MyDivider />
             <UserInput />
             <InputState />

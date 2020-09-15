@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Arrays2 = () => {
+const CountHooks = () => {
     const [count, setCount] = useState(0)
     
     return (
@@ -12,12 +12,9 @@ const Arrays2 = () => {
                 {' '}
                 times
             </p>
-            <button onClick={() => setCount(count + 1)}>Click Me</button>
+            <button type={} onClick={() => setCount(count + 1)}>Click Me</button>
         </div>
     )
 }
 
-export default Arrays2
-
-
-// family tree. select any 2 names and display their relation
+export default CountHooks
