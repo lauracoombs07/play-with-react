@@ -10,13 +10,15 @@ import MyDivider from './MyDivider'
 import Calculator from './Calculator'
 import ArrayPractice from './InputFields/BookFilters'
 import CountHooks from './InputFields/CountHooks'
-import Relations from './Relations'
+// import Relations from './Relations'
+import ShoppingCart from './ShoppingCart/ShoppingCart'
 
 function App() {
     return (
         <div className="App">
             {/* <SerratedTabs /> */}
-            <Relations />
+            <ShoppingCart />
+            {/* <Relations /> */}
             <MyDivider />
             <ArrayPractice />
             <MyDivider />

@@ -12,7 +12,7 @@ const CountHooks = () => {
                 {' '}
                 times
             </p>
-            <button type={} onClick={() => setCount(count + 1)}>Click Me</button>
+            <button onClick={() => setCount(count + 1)}>Click Me</button>
         </div>
     )
 }
