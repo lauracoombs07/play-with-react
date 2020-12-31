@@ -12,6 +12,6 @@ describe('Shopping Cart', () => {
     })
     it('should contain list of Checklist containing cat and dog', () => {
         const wrapper = mount(<ShoppingCart />)
-        expect(wrapper.contains('.checkbox')).toBe(true)
+        expect(wrapper.contains('.checkbox')).toEqual(true)
     })
 })

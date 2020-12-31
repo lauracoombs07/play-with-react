@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from '@material-ui/core'
 import Checkbox from '@material-ui/core/Checkbox'
 import FormControl from '@material-ui/core/FormControl'
@@ -12,17 +12,24 @@ const ShoppingCart = () => {
         dog: false,
         cat: false
     })
+
     const [list, setList] = useState([])
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.checked })
     }
+    useEffect(
+        () => {
+            const subscription = props.source.subscribe()
+            return () => {
+                subscription.unsubscribe()
+            }
+        },
+        [props.source],
+    )
 
-    const handleAnimals = (e) => {
-        const checked = { [e.target.name]: e.target.checked }
-        setList({ ...list, list.concat() })
-        console.log('list', list)
-        console.log('state', state.dog)
+    const handleAnimals = () => {
+        // if true list.push animal
 
     // hook push to array
     }
@@ -54,7 +61,7 @@ const ShoppingCart = () => {
                 {list}
             </div>
         </div>
-                // render list
+    // render list
     )
 }
 
